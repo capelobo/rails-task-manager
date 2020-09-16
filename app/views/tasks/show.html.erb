@@ -1,0 +1,19 @@
+<h1>Info about Task</h1>
+
+<p>Title: <%= @task.title %></p>
+<p>Details: <%= @task.details %></p>
+
+<!-- Não use tag a no rails, sempre use link_to -->
+<!-- <a href="/tasks">All Tasks</a> -->
+
+<p>
+  <%= link_to 'All Tasks', tasks_path %>
+</p>
+
+<p>
+  <%= link_to 'Edit this Task', edit_task_path(@task) %>
+</p>
+
+<p>
+  <%= link_to 'Remove this Task', task_path(@task), method: :delete, data: { confirm: 'Are you Sure?' } %>
+</p>
